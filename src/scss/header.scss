@@ -1,0 +1,153 @@
+.header {
+   background-image: url(../img/header-back.jpg);
+   &__inner {
+      padding: 3px 36px 4px 5px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+   }
+   &__content {
+      width: 83%;
+   }
+   &__content-contact {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+      padding-bottom: 13px;
+      display: flex;
+      justify-content: center;
+      margin-bottom: 8px;
+   }
+   &__content-nav {
+      display: flex;
+      justify-content: center;
+   }
+}
+
+.number {
+   font-family: "Nanum Myeongjo";
+   font-size: 22px;
+   line-height: 30px;
+   position: relative;
+   padding-left: 50px;
+   padding-top: 8px;
+   &::before {
+      content: "";
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      top: 4px;
+      left: 0px;
+
+      background-image: url(../img/tel.svg);
+   }
+}
+
+.mail {
+   font-family: "Cormorant Garamond";
+   font-size: 24px;
+   line-height: 30px;
+   position: relative;
+   padding-left: 50px;
+   margin-left: 70px;
+   padding-top: 5px;
+   &::before {
+      content: "";
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      top: 4px;
+      left: 0px;
+      background-image: url(../img/mail.svg);
+   }
+}
+
+.contact-button {
+   border-radius: 70px;
+   font-family: "Cormorant Garamond";
+   font-size: 20px;
+   line-height: 30px;
+   padding: 3px 25px;
+   background-color: #c4c4c4;
+   border: 2px solid rgba(0, 0, 0, 0.5);
+   margin-left: 70px;
+   transition: all 0.3s;
+   &:hover {
+      background-color: rgba(2, 36, 158, 0.75);
+   }
+}
+.menu {
+   &__list {
+      display: flex;
+      align-items: center;
+   }
+   &__item {
+      display: inline-block;
+      text-align: center;
+      border-bottom: 2px solid transparent;
+      transition: all 0.3s;
+      &:hover:not(:last-child) {
+         border-bottom: 2px solid rgba(0, 0, 0, 0.5);
+      }
+      &:not(:first-child) {
+         margin-left: 72px;
+      }
+   }
+   &__link {
+      font-size: 24px;
+      line-height: 25px;
+      font-family: "Cormorant Garamond", serif;
+   }
+}
+
+.dropdown {
+   position: relative;
+   &::after {
+      content: "";
+      position: absolute;
+      background-image: url("../img/arrow-down.svg");
+      width: 14px;
+      height: 11px;
+      right: -20px;
+      top: 54px;
+   }
+   &__container {
+      position: absolute;
+      background-color: transparent;
+      width: 234px;
+      background-image: url(../img/dropdown-back.png);
+      min-height: 147px;
+      left: -3px;
+      top: 65px;
+      display: none;
+   }
+   &__list {
+      margin-top: 45px;
+      text-align: left;
+      line-height: 24px;
+   }
+   &__item {
+      margin-bottom: 10px;
+   }
+   &__link {
+      font-size: 24px;
+      line-height: 24px;
+      font-family: "Cormorant Garamond", serif;
+      padding-left: 24px;
+      position: relative;
+      &::before {
+         content: "";
+         position: absolute;
+         background-image: url(../img/head-circle.svg);
+         width: 4px;
+         height: 4px;
+         left: 14px;
+         top: 13px;
+      }
+      & span {
+         padding-left: 24px;
+      }
+   }
+}
+
+.menu__dropdown.dropdown:hover > .dropdown__container {
+   display: block;
+}

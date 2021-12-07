@@ -37,6 +37,7 @@ function imagesTent() {
       '.src/img/**/*.svg',
    ])
       .pipe(dest('app/img'))
+      .pipe(browserSync.stream())
 }
 function imagesProd() {
    return src([
