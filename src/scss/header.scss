@@ -1,7 +1,9 @@
 .header {
    background-image: url(../img/header-back.jpg);
+   border-bottom: 1px solid rgba(0, 0, 0, 0.3);
    &__inner {
-      padding: 3px 36px 4px 5px;
+      padding: 5px 36px 7px 5px;
+      min-width: 100%;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -37,7 +39,7 @@
       top: 4px;
       left: 0px;
 
-      background-image: url(../img/tel.svg);
+      background-image: url(../img/icons/tel.svg);
    }
 }
 
@@ -56,7 +58,7 @@
       height: 40px;
       top: 4px;
       left: 0px;
-      background-image: url(../img/mail.svg);
+      background-image: url(../img/icons/mail.svg);
    }
 }
 
@@ -103,11 +105,11 @@
    &::after {
       content: "";
       position: absolute;
-      background-image: url("../img/arrow-down.svg");
+      background-image: url("../img/icons/arrow-down.svg");
       width: 14px;
       height: 11px;
       right: -20px;
-      top: 54px;
+      top: 41px;
    }
    &__container {
       position: absolute;
@@ -116,8 +118,9 @@
       background-image: url(../img/dropdown-back.png);
       min-height: 147px;
       left: -3px;
-      top: 65px;
+      top: 52px;
       display: none;
+      z-index: 10;
    }
    &__list {
       margin-top: 45px;
@@ -136,7 +139,7 @@
       &::before {
          content: "";
          position: absolute;
-         background-image: url(../img/head-circle.svg);
+         background-image: url(../img/icons/head-circle.svg);
          width: 4px;
          height: 4px;
          left: 14px;

@@ -75,6 +75,10 @@
       background-color: #02249e;
       padding: 14px 35px;
       line-height: 15px;
+      transition: all 0.3s;
+      &:hover {
+         background-color: #7184c9;
+      }
    }
    &__hint {
       font-size: 12px;
